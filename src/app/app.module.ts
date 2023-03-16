@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -8,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { FormulariosComponent } from './body/formularios/formularios.component';
 import { ClientesComponent } from './body/clientes/clientes.component';
+import { HomeComponent } from './body/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceComponent } from './services/service/service.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,18 @@ import { ClientesComponent } from './body/clientes/clientes.component';
     FooterComponent,
     BodyComponent,
     FormulariosComponent,
-    ClientesComponent
+    ClientesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    
   ],
-  providers: [],
+  providers: [ServiceComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
