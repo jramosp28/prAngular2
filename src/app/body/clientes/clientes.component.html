@@ -1,4 +1,5 @@
-<table>
+<div class="container">
+  <table>
     <thead>
       <tr>
         <th>Nombre</th>
@@ -8,27 +9,26 @@
         <th>Teléfono</th>
         <th>Dirección</th>
         <th>Ciudad</th>
-        <th>Código postal</th>
         <th>Fecha</th>
         <th>Tienes moto?</th>
         <th>Tipo de moto</th>
       </tr>
     </thead>
     <tbody>
-        <ng-container *ngFor="let clientes of form">
-            <tr>
-                <td>{{ clientes.name }}</td>
-                <td>{{ clientes.lastName }}</td>
-                <td>{{ clientes.lastName2 }}</td>
-                <td>{{ clientes.email }}</td>
-                <td>{{ clientes.phone }}</td>
-                <td>{{ clientes.address }}</td>
-                <td>{{ clientes.city }}</td>
-                <td>{{ clientes.zip }}</td>
-                <td>{{ clientes.date }}</td>
-                <td>{{ clientes.bike ? 'Sí' : 'No' }}</td>
-                <td>{{ clientes.bike ? clientes.bikeModel : '-' }}</td>
-              </tr>
-        </ng-container>
+      <ng-container *ngFor="let clientes of form">
+        <tr>
+          <td>{{ clientes.name }}</td>
+          <td>{{ clientes.lastName }}</td>
+          <td>{{ clientes.lastName2 }}</td>
+          <td>{{ clientes.email }}</td>
+          <td>{{ clientes.phone }}</td>
+          <td>{{ clientes.address }}</td>
+          <td>{{ clientes.city }}</td>
+          <td>{{ clientes.date }}</td>
+          <td>{{ clientes.bike }}</td>
+          <td>{{ clientes.bikeModel }}</td>
+        </tr>
+      </ng-container>
     </tbody>
   </table>
+</div>

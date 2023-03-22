@@ -1,5 +1,5 @@
 <div class="form-container">
-    <form [formGroup]="MyNewForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="MyNewForm">
         <div>
             <label for="name"> Nombre: </label>
             <input type="text" #name id="name" formControlName="name">
@@ -29,10 +29,6 @@
             <input type="text" #city id="city" formControlName="city">
         </div>
         <div>
-            <label for="zip"> Código postal: </label>
-            <input type="text" #zip id="zip" formControlName="zip">
-        </div>
-        <div>
             <label for="date"> Fecha: </label>
             <input type="date" #date id="date" formControlName="date">
         </div>
@@ -43,8 +39,8 @@
             </div>
             <div>
                 <label for="bikeModel"> Tipo de moto: </label>
-                    <select #bikeModel id="bikeModel" name="bikeModel">
-                        <option value="Ninguna">--------</option>
+                    <select id="bikeModel" name="bikeModel" formControlName="bikeModel">
+                        <option value="No">No</option>
                         <option value="Scooters">Scooters</option>
                         <option value="Adventure">Adventure</option>
                         <option value="Deportivas">Deportivas</option>
@@ -52,9 +48,8 @@
                     </select>
             </div>
         </div>
-        <p>{{MyNewForm.status}}</p>
         <div class="but">
-            <button type="submit" [disabled]="!MyNewForm.valid" (click)="onSubmit()">Enviar</button>
+            <button type="reset" [disabled]="!MyNewForm.valid" (click)="onSubmit()">Enviar</button>
         </div>
     </form>
 </div>

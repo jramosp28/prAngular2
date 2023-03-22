@@ -6,7 +6,6 @@ export interface formMoto {
     phone: number,
     address: String,
     city: String,
-    zip: number,
     date: Date,
     bike: boolean,
     bikeModel: String
